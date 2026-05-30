@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Taicheng Relaxing Spa | Professional Massage in Phoenix, AZ</title>
-  <meta name="description" content="Taicheng Relaxing Spa offers foot reflexology, table massage, Thai massage, Lomi Lomi massage, chair massage, and reflexology combo massage in Phoenix, AZ." />
+  <meta name="description" content="Taicheng Relaxing Spa offers professional massage, reflexology, Thai massage, Swedish massage, couples massage, four-hand massage, and chair massage in Phoenix, AZ." />
 
   <style>
     :root {
@@ -179,10 +179,7 @@
       z-index: -3;
     }
 
-    .hero-bg::before,
-    .hero-bg::after,
     .hero-bg .slide {
-      content: "";
       position: absolute;
       inset: 0;
       background-size: cover;
@@ -487,17 +484,18 @@
       object-fit: cover;
       opacity: 0;
       transform: scale(1.05);
-      animation: cardCarousel 18s infinite;
+      animation: cardCarousel 24s infinite;
     }
 
     .carousel img:nth-child(1) { animation-delay: 0s; }
     .carousel img:nth-child(2) { animation-delay: 6s; }
     .carousel img:nth-child(3) { animation-delay: 12s; }
+    .carousel img:nth-child(4) { animation-delay: 18s; }
 
     @keyframes cardCarousel {
       0%, 100% { opacity: 0; transform: scale(1.05); }
-      8%, 31% { opacity: 1; transform: scale(1.12); }
-      39% { opacity: 0; transform: scale(1.16); }
+      7%, 24% { opacity: 1; transform: scale(1.12); }
+      31% { opacity: 0; transform: scale(1.16); }
     }
 
     .service-body {
@@ -515,6 +513,16 @@
       color: var(--muted);
       margin-bottom: 18px;
       font-size: 0.98rem;
+    }
+
+    .promo-line {
+      margin: 0 0 14px;
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: rgba(184, 71, 58, 0.08);
+      color: var(--brand-dark);
+      font-weight: 800;
+      line-height: 1.35;
     }
 
     .price-list {
@@ -960,7 +968,7 @@
 
     <div class="floating-card parallax reveal" style="--speed: -0.035px;">
       <strong>Pain Relief & Healthful Comfort</strong>
-      <span>Foot reflexology, body massage, Thai massage, Lomi Lomi, chair massage, and more.</span>
+      <span>Foot reflexology, Swedish massage, Thai massage, Lomi Lomi, couples massage, four-hand massage, and chair massage.</span>
     </div>
   </header>
 
@@ -1011,12 +1019,12 @@
             <div class="section-kicker">Services & Pricing</div>
             <h2 class="section-title">Massage services for real relief.</h2>
             <p class="section-copy">
-              Choose a focused foot reflexology session, a full-body table service, or a quick chair massage
-              for targeted relief during a busy day.
+              Choose a focused foot reflexology session, a full-body massage, a couples experience,
+              or a quick chair massage for targeted relief during a busy day.
             </p>
           </div>
           <div class="services-note">
-            Deep tissue upgrades are available for select services. Prices are based on the posted in-store menu.
+            Deep tissue upgrades are available for select services. Prices are based on the posted in-store menu and updated service information.
           </div>
         </div>
 
@@ -1054,13 +1062,13 @@
           </article>
 
           <article class="service-card reveal parallax" style="--speed: 0.026px;">
-            <div class="carousel" aria-label="Table Massage image carousel">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1L-0O6Juxasb8QicSAXdnWLSQjLrVvGVr8HPij_dvsgW7cWCeMVBGB-12hqGhPUkx5oA&usqp=CAU" alt="Table massage" />
-              <img src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg" alt="Full body table massage" />
+            <div class="carousel" aria-label="Swedish Massage image carousel">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1L-0O6Juxasb8QicSAXdnWLSQjLrVvGVr8HPij_dvsgW7cWCeMVBGB-12hqGhPUkx5oA&usqp=CAU" alt="Swedish massage" />
+              <img src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg" alt="Full body Swedish massage" />
               <img src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg" alt="Back and shoulder massage" />
             </div>
             <div class="service-body">
-              <h3>Table Massage</h3>
+              <h3>Swedish Massage</h3>
               <p>Back, neck, shoulders, arms, and legs; no feet. Great for office tension, shoulder stiffness, lower-back discomfort, and daily stress.</p>
               <div class="price-list">
                 <div class="price-row"><span>30 Minutes</span><strong>$40</strong></div>
@@ -1073,13 +1081,14 @@
 
           <article class="service-card reveal parallax" style="--speed: 0.012px;">
             <div class="carousel" aria-label="Thai Massage image carousel">
-              <img src="https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg" alt="Thai body massage" />
-              <img src="https://i.pinimg.com/736x/21/8f/4c/218f4cd988ca278667bd28ff54a577ff.jpg" alt="Therapeutic body work" />
-              <img src="https://i.pinimg.com/736x/86/47/ef/8647ef5b51553a8e57ca32e6b2ec74f0.jpg" alt="Deep body massage technique" />
+              <img src="https://i.pinimg.com/736x/c8/47/6d/c8476df9d19cf524755610d0c04bff4d.jpg" alt="Thai massage stretching technique" />
+              <img src="https://i.pinimg.com/736x/2e/7d/d6/2e7dd60aa94bd09e0d6e7bfaa071a325.jpg" alt="Thai massage pressure technique" />
+              <img src="https://i.pinimg.com/736x/80/2d/b4/802db4ae1da32939bfdf390e5fcec431.jpg" alt="Relaxing Thai massage" />
+              <img src="https://i.pinimg.com/736x/e6/9a/18/e69a189789a10da9f1e1db6bc9f21303.jpg" alt="Thai massage for deep relaxation" />
             </div>
             <div class="service-body">
               <h3>Thai Massage</h3>
-              <p>A deeply relaxing body-work service for guests seeking mobility, tension release, and a refreshed feeling after long workdays.</p>
+              <p>Deep relaxation with stretching and pressure techniques to relieve tension and restore vitality.</p>
               <div class="price-list">
                 <div class="price-row"><span>30 Minutes</span><strong>$50</strong></div>
                 <div class="price-row"><span>60 Minutes</span><strong>$70</strong></div>
@@ -1123,6 +1132,41 @@
               </div>
               <span class="addon">Hot stone: +$10</span>
               <span class="addon">Deep tissue plus: +$10</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal parallax" style="--speed: 0.014px;">
+            <div class="carousel" aria-label="Intimate Couples Massage image carousel">
+              <img src="https://i.pinimg.com/736x/ac/a6/69/aca669d5a5fe654a32f0f6b3c5138275.jpg" alt="Couples massage" />
+              <img src="https://i.pinimg.com/736x/8d/88/02/8d88021e4d32ed8abd1452b7f48ce00b.jpg" alt="Relaxing couples massage" />
+              <img src="https://i.pinimg.com/736x/70/cb/60/70cb60cfa74373d9c0a2e39d478f489e.jpg" alt="Intimate couples massage" />
+              <img src="https://i.pinimg.com/1200x/07/13/62/0713626b6e91eb53a1b7b60a3d0dfd8e.jpg" alt="Couples spa massage" />
+            </div>
+            <div class="service-body">
+              <h3>Intimate Couples Massage</h3>
+              <div class="promo-line">💕 Couples Massage – Save $10 💕<br />Relax together, enjoy time together.</div>
+              <p>A shared relaxation experience designed for couples who want to unwind side by side in a calm and comfortable setting.</p>
+              <div class="price-list">
+                <div class="price-row"><span>60 Minutes</span><strong>$140</strong></div>
+                <div class="price-row"><span>90 Minutes</span><strong>$200</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card reveal parallax" style="--speed: 0.022px;">
+            <div class="carousel" aria-label="Four-Hand Massage image carousel">
+              <img src="https://i.pinimg.com/736x/09/31/eb/0931ebab4602ec51313b49b72bb10c1e.jpg" alt="Four-hand massage" />
+              <img src="https://i.pinimg.com/736x/a6/b4/26/a6b4261509788cc843fafcac56d38c51.jpg" alt="Two therapists massage" />
+              <img src="https://i.pinimg.com/1200x/2b/81/ad/2b81ad4a2b574b076d5676db9ba13418.jpg" alt="Relaxing four-hand massage" />
+            </div>
+            <div class="service-body">
+              <h3>Four-Hand Massage</h3>
+              <div class="promo-line">💆 Four-Hand Massage 💆<br />Two therapists, one deeply relaxing experience.</div>
+              <p>Coordinated massage techniques for ultimate relaxation and stress relief, ideal for guests seeking a deeply immersive body-work session.</p>
+              <div class="price-list">
+                <div class="price-row"><span>60 Minutes</span><strong>$140</strong></div>
+                <div class="price-row"><span>90 Minutes</span><strong>$200</strong></div>
+              </div>
             </div>
           </article>
         </div>
@@ -1169,16 +1213,16 @@
       <div class="marquee-wrap" aria-label="Customer reviews">
         <div class="marquee">
           <div class="review-card"><div class="stars">★★★★★</div><p>“The foot reflexology was exactly what I needed after a long week. My legs felt lighter right away.”</p><b>— Amanda R.</b></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“Clean, quiet, and very relaxing. The table massage helped my neck and shoulders so much.”</p><b>— Daniel K.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“Clean, quiet, and very relaxing. The Swedish massage helped my neck and shoulders so much.”</p><b>— Daniel K.</b></div>
           <div class="review-card"><div class="stars">★★★★★</div><p>“Great value for the 90-minute service. I left feeling calm, loose, and completely refreshed.”</p><b>— Michelle S.</b></div>
           <div class="review-card"><div class="stars">★★★★★</div><p>“The chair massage is perfect when I only have a short break. Fast relief and very convenient.”</p><b>— Chris T.</b></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“The reflexology combo gave me both foot relief and body relaxation. I will definitely return.”</p><b>— Laura M.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“The couples massage was peaceful and comfortable. It made our afternoon feel special.”</p><b>— Laura M.</b></div>
 
           <div class="review-card"><div class="stars">★★★★★</div><p>“The foot reflexology was exactly what I needed after a long week. My legs felt lighter right away.”</p><b>— Amanda R.</b></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“Clean, quiet, and very relaxing. The table massage helped my neck and shoulders so much.”</p><b>— Daniel K.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“Clean, quiet, and very relaxing. The Swedish massage helped my neck and shoulders so much.”</p><b>— Daniel K.</b></div>
           <div class="review-card"><div class="stars">★★★★★</div><p>“Great value for the 90-minute service. I left feeling calm, loose, and completely refreshed.”</p><b>— Michelle S.</b></div>
           <div class="review-card"><div class="stars">★★★★★</div><p>“The chair massage is perfect when I only have a short break. Fast relief and very convenient.”</p><b>— Chris T.</b></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“The reflexology combo gave me both foot relief and body relaxation. I will definitely return.”</p><b>— Laura M.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“The couples massage was peaceful and comfortable. It made our afternoon feel special.”</p><b>— Laura M.</b></div>
         </div>
 
         <div class="marquee reverse">
@@ -1186,13 +1230,13 @@
           <div class="review-card"><div class="stars">★★★★★</div><p>“Thai massage helped me feel more flexible and less stiff. A wonderful reset for my back.”</p><b>— Natalie G.</b></div>
           <div class="review-card"><div class="stars">★★★★★</div><p>“The Lomi Lomi massage was smooth and calming. I felt relaxed for the rest of the day.”</p><b>— Olivia W.</b></div>
           <div class="review-card"><div class="stars">★★★★★</div><p>“Easy parking, friendly service, and a very comfortable environment. Great local massage spot.”</p><b>— Mark L.</b></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“I came in with shoulder tension and left feeling much better. The deep tissue upgrade was worth it.”</p><b>— Sophia C.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“The four-hand massage was incredibly relaxing. The synchronized techniques made the whole session feel luxurious.”</p><b>— Sophia C.</b></div>
 
           <div class="review-card"><div class="stars">★★★★★</div><p>“I appreciated the peaceful room and simple pricing. No pressure, just a good relaxing massage.”</p><b>— Kevin P.</b></div>
           <div class="review-card"><div class="stars">★★★★★</div><p>“Thai massage helped me feel more flexible and less stiff. A wonderful reset for my back.”</p><b>— Natalie G.</b></div>
           <div class="review-card"><div class="stars">★★★★★</div><p>“The Lomi Lomi massage was smooth and calming. I felt relaxed for the rest of the day.”</p><b>— Olivia W.</b></div>
           <div class="review-card"><div class="stars">★★★★★</div><p>“Easy parking, friendly service, and a very comfortable environment. Great local massage spot.”</p><b>— Mark L.</b></div>
-          <div class="review-card"><div class="stars">★★★★★</div><p>“I came in with shoulder tension and left feeling much better. The deep tissue upgrade was worth it.”</p><b>— Sophia C.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“The four-hand massage was incredibly relaxing. The synchronized techniques made the whole session feel luxurious.”</p><b>— Sophia C.</b></div>
         </div>
       </div>
     </section>
