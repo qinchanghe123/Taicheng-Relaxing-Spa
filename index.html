@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taicheng Relaxing Spa | Professional Massage in Phoenix, AZ</title>
+  <meta name="description" content="Taicheng Relaxing Spa offers foot reflexology, table massage, Thai massage, Lomi Lomi massage, chair massage, and reflexology combo massage in Phoenix, AZ." />
+
+  <style>
+    :root {
+      --bg: #fff8f2;
+      --bg-soft: #f9eadf;
+      --ink: #2e221f;
+      --muted: #7c625c;
+      --brand: #b8473a;
+      --brand-dark: #7e2e27;
+      --accent: #e59f72;
+      --cream: #fffaf6;
+      --glass: rgba(255, 255, 255, 0.72);
+      --shadow: 0 24px 70px rgba(80, 39, 27, 0.16);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at 15% 5%, rgba(229, 159, 114, 0.18), transparent 34%),
+        radial-gradient(circle at 85% 18%, rgba(184, 71, 58, 0.12), transparent 30%),
+        var(--bg);
+      color: var(--ink);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section {
+      position: relative;
+      padding: 110px 0;
+      overflow: hidden;
+    }
+
+    .section-title {
+      font-size: clamp(2.2rem, 5vw, 4.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 18px;
+    }
+
+    .section-kicker {
+      color: var(--brand);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .section-copy {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.6vw, 1.18rem);
+    }
+
+    .nav {
+      position: fixed;
+      z-index: 100;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1120px, calc(100% - 24px));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: 999px;
+      background: rgba(255, 250, 246, 0.78);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 18px 50px rgba(73, 36, 25, 0.12);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      color: var(--brand-dark);
+      white-space: nowrap;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand), var(--accent));
+      display: grid;
+      place-items: center;
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(184, 71, 58, 0.26);
+      font-size: 18px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links a {
+      padding: 9px 13px;
+      border-radius: 999px;
+      color: #654943;
+      font-size: 0.93rem;
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(184, 71, 58, 0.09);
+      color: var(--brand-dark);
+    }
+
+    .nav-cta {
+      background: var(--brand);
+      color: #fff !important;
+      box-shadow: 0 10px 26px rgba(184, 71, 58, 0.25);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: var(--brand);
+      color: white;
+      border-radius: 999px;
+      padding: 9px 13px;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 100svh;
+      position: relative;
+      display: grid;
+      align-items: center;
+      isolation: isolate;
+      overflow: hidden;
+      color: white;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+    }
+
+    .hero-bg::before,
+    .hero-bg::after,
+    .hero-bg .slide {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      animation: heroFade 24s infinite;
+      opacity: 0;
+      transform: scale(1.08);
+    }
+
+    .hero-bg .slide:nth-child(1) {
+      background-image: url("1.jpg");
+      animation-delay: 0s;
+    }
+
+    .hero-bg .slide:nth-child(2) {
+      background-image: url("https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg");
+      animation-delay: 8s;
+    }
+
+    .hero-bg .slide:nth-child(3) {
+      background-image: url("https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg");
+      animation-delay: 16s;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(40, 18, 14, 0.72), rgba(40, 18, 14, 0.34), rgba(40, 18, 14, 0.64)),
+        radial-gradient(circle at 18% 70%, rgba(229,159,114,0.38), transparent 32%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 160px;
+      background: linear-gradient(transparent, var(--bg));
+      z-index: -1;
+    }
+
+    @keyframes heroFade {
+      0%, 100% { opacity: 0; transform: scale(1.08) translateY(0); }
+      8%, 30% { opacity: 1; transform: scale(1.14) translateY(-16px); }
+      38% { opacity: 0; transform: scale(1.18) translateY(-28px); }
+    }
+
+    .hero-content {
+      width: min(900px, calc(100% - 32px));
+      margin: 0 auto;
+      padding-top: 90px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.28);
+      backdrop-filter: blur(12px);
+      margin-bottom: 28px;
+      font-size: 0.92rem;
+    }
+
+    .hero h1 {
+      max-width: 860px;
+      font-size: clamp(3.3rem, 9vw, 8.8rem);
+      line-height: 0.88;
+      letter-spacing: -0.07em;
+      text-shadow: 0 18px 60px rgba(0,0,0,0.28);
+      margin-bottom: 26px;
+    }
+
+    .hero p {
+      max-width: 640px;
+      font-size: clamp(1.08rem, 2vw, 1.36rem);
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: var(--brand-dark);
+      box-shadow: 0 18px 42px rgba(0,0,0,0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 55px rgba(0,0,0,0.26);
+    }
+
+    .btn-ghost {
+      border-color: rgba(255,255,255,0.38);
+      color: white;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+    }
+
+    .floating-card {
+      position: absolute;
+      right: max(30px, 8vw);
+      bottom: 70px;
+      width: min(330px, calc(100% - 40px));
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.28);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.22);
+      color: white;
+    }
+
+    .floating-card strong {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+
+    .floating-card span {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+    }
+
+    .parallax {
+      will-change: transform;
+      transform: translate3d(0, calc(var(--scroll, 0) * var(--speed, 0.02px)), 0);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(34px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(6px);
+      pointer-events: none;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    .blob-one {
+      width: 260px;
+      height: 260px;
+      background: rgba(229, 159, 114, 0.24);
+      top: 80px;
+      right: -70px;
+    }
+
+    .blob-two {
+      width: 220px;
+      height: 220px;
+      background: rgba(184, 71, 58, 0.12);
+      bottom: 80px;
+      left: -80px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .about-card {
+      padding: clamp(28px, 5vw, 54px);
+      border-radius: var(--radius-xl);
+      background: var(--glass);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.7);
+      backdrop-filter: blur(18px);
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .feature {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.68);
+      border: 1px solid rgba(184, 71, 58, 0.08);
+    }
+
+    .feature b {
+      display: block;
+      color: var(--brand-dark);
+      margin-bottom: 5px;
+    }
+
+    .about-visual {
+      min-height: 560px;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(rgba(80,36,28,0.16), rgba(80,36,28,0.16)),
+        url("1.jpg") center/cover;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-visual::after {
+      content: "Quiet • Clean • Private";
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      padding: 16px 20px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.78);
+      backdrop-filter: blur(14px);
+      color: var(--brand-dark);
+      font-weight: 800;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.16);
+    }
+
+    .services-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .services-note {
+      max-width: 360px;
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.7);
+      color: var(--muted);
+      border: 1px solid rgba(184, 71, 58, 0.1);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      border-radius: var(--radius-xl);
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(255,255,255,0.9);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transform: translateY(0);
+      transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 80px rgba(80, 39, 27, 0.2);
+    }
+
+    .carousel {
+      position: relative;
+      height: 245px;
+      overflow: hidden;
+      background: #ead3c4;
+    }
+
+    .carousel img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transform: scale(1.05);
+      animation: cardCarousel 18s infinite;
+    }
+
+    .carousel img:nth-child(1) { animation-delay: 0s; }
+    .carousel img:nth-child(2) { animation-delay: 6s; }
+    .carousel img:nth-child(3) { animation-delay: 12s; }
+
+    @keyframes cardCarousel {
+      0%, 100% { opacity: 0; transform: scale(1.05); }
+      8%, 31% { opacity: 1; transform: scale(1.12); }
+      39% { opacity: 0; transform: scale(1.16); }
+    }
+
+    .service-body {
+      padding: 24px;
+    }
+
+    .service-body h3 {
+      font-size: 1.55rem;
+      line-height: 1.1;
+      margin-bottom: 10px;
+      letter-spacing: -0.03em;
+    }
+
+    .service-body p {
+      color: var(--muted);
+      margin-bottom: 18px;
+      font-size: 0.98rem;
+    }
+
+    .price-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px dashed rgba(126, 46, 39, 0.22);
+      color: #5c4540;
+    }
+
+    .price-row strong {
+      color: var(--brand-dark);
+    }
+
+    .addon {
+      margin-top: 14px;
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(184, 71, 58, 0.09);
+      color: var(--brand-dark);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .booking {
+      background:
+        linear-gradient(135deg, rgba(126,46,39,0.94), rgba(184,71,58,0.88)),
+        url("https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg") center/cover fixed;
+      color: white;
+    }
+
+    .booking::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.16), transparent 30%);
+      pointer-events: none;
+    }
+
+    .booking-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+      gap: 28px;
+      padding: clamp(28px, 5vw, 58px);
+      border-radius: var(--radius-xl);
+      background: rgba(255,255,255,0.13);
+      border: 1px solid rgba(255,255,255,0.28);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 30px 90px rgba(0,0,0,0.22);
+    }
+
+    .booking-card .section-copy {
+      color: rgba(255,255,255,0.84);
+    }
+
+    .booking-panel {
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.9);
+      color: var(--ink);
+    }
+
+    .booking-panel h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      color: var(--brand-dark);
+    }
+
+    .booking-panel a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 14px;
+      padding: 15px 16px;
+      border-radius: 16px;
+      background: var(--bg-soft);
+      color: var(--brand-dark);
+      font-weight: 800;
+    }
+
+    .reviews {
+      background: #fff3ea;
+    }
+
+    .marquee-wrap {
+      margin-top: 42px;
+      display: grid;
+      gap: 18px;
+      overflow: hidden;
+    }
+
+    .marquee {
+      display: flex;
+      width: max-content;
+      gap: 18px;
+      animation: scrollLeft 36s linear infinite;
+    }
+
+    .marquee.reverse {
+      animation: scrollRight 40s linear infinite;
+    }
+
+    .review-card {
+      width: min(390px, 82vw);
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.8);
+      border: 1px solid rgba(255,255,255,0.95);
+      box-shadow: 0 16px 50px rgba(80, 39, 27, 0.1);
+    }
+
+    .stars {
+      color: #c9783e;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    .review-card p {
+      color: #5f4842;
+      margin-bottom: 12px;
+    }
+
+    .review-card b {
+      color: var(--brand-dark);
+    }
+
+    @keyframes scrollLeft {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes scrollRight {
+      from { transform: translateX(-50%); }
+      to { transform: translateX(0); }
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .accordion {
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      border-radius: 22px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.78);
+      box-shadow: 0 16px 45px rgba(80, 39, 27, 0.09);
+      border: 1px solid rgba(255,255,255,0.86);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 22px;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      font: inherit;
+      font-size: 1.08rem;
+      font-weight: 800;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .faq-question span:last-child {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(184, 71, 58, 0.09);
+      color: var(--brand-dark);
+      flex: 0 0 auto;
+      transition: 0.25s ease;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.32s ease;
+    }
+
+    .faq-answer p {
+      padding: 0 22px 22px;
+      color: var(--muted);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 180px;
+    }
+
+    .faq-item.active .faq-question span:last-child {
+      transform: rotate(45deg);
+      background: var(--brand);
+      color: white;
+    }
+
+    .contact {
+      background: linear-gradient(180deg, var(--bg), #f4dccb);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.86fr 1.14fr;
+      gap: 28px;
+      align-items: stretch;
+      margin-top: 38px;
+    }
+
+    .contact-card,
+    .map-card {
+      border-radius: var(--radius-xl);
+      background: rgba(255,255,255,0.78);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.9);
+      overflow: hidden;
+    }
+
+    .contact-card {
+      padding: clamp(26px, 4vw, 42px);
+    }
+
+    .info-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .info-item {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(249, 234, 223, 0.7);
+    }
+
+    .info-item b {
+      display: block;
+      color: var(--brand-dark);
+      margin-bottom: 4px;
+    }
+
+    .map-card iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 460px;
+      border: 0;
+      display: block;
+    }
+
+    footer {
+      padding: 30px 0;
+      text-align: center;
+      color: var(--muted);
+      background: #f4dccb;
+    }
+
+    @media (max-width: 960px) {
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav {
+        border-radius: 24px;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px;
+        border-radius: 24px;
+        background: rgba(255,250,246,0.95);
+        box-shadow: 0 18px 50px rgba(73, 36, 25, 0.14);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 13px 16px;
+      }
+
+      .floating-card {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin: 34px auto 0;
+      }
+
+      .hero-content {
+        padding-top: 120px;
+      }
+
+      .about-grid,
+      .booking-card,
+      .faq-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-visual {
+        min-height: 400px;
+      }
+
+      .services-header {
+        display: block;
+      }
+
+      .services-note {
+        margin-top: 20px;
+        max-width: none;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section {
+        padding: 78px 0;
+      }
+
+      .container {
+        width: min(100% - 22px, var(--max));
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 16vw, 4.6rem);
+      }
+
+      .hero-actions {
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .about-features {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .carousel {
+        height: 230px;
+      }
+
+      .booking-card {
+        padding: 22px;
+      }
+
+      .review-card {
+        width: 84vw;
+      }
+
+      .map-card iframe {
+        min-height: 360px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+      }
+
+      .parallax {
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#home" class="logo" aria-label="Taicheng Relaxing Spa home">
+      <span class="logo-mark">✦</span>
+      <span>Taicheng Relaxing Spa</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Open menu">Menu</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact">Contact</a>
+      <a href="#booking" class="nav-cta">Book Now</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-bg parallax" style="--speed: -0.07px;">
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+    </div>
+
+    <div class="hero-content parallax" style="--speed: 0.025px;">
+      <div class="hero-kicker reveal">Phoenix, AZ • Professional Full Body Massage</div>
+      <h1 class="reveal">Relax deeply. Feel renewed.</h1>
+      <p class="reveal">
+        Step into a calm, private, and soothing space designed for pain relief, stress release,
+        and healthful comfort from head to toe.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#booking" class="btn btn-primary">Book Now</a>
+        <a href="tel:6023399766" class="btn btn-ghost">Call 602-339-9766</a>
+      </div>
+    </div>
+
+    <div class="floating-card parallax reveal" style="--speed: -0.035px;">
+      <strong>Pain Relief & Healthful Comfort</strong>
+      <span>Foot reflexology, body massage, Thai massage, Lomi Lomi, chair massage, and more.</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="about">
+      <div class="blob blob-one parallax" style="--speed: -0.04px;"></div>
+      <div class="blob blob-two parallax" style="--speed: 0.035px;"></div>
+
+      <div class="container about-grid">
+        <div class="about-card reveal parallax" style="--speed: 0.012px;">
+          <div class="section-kicker">About Us</div>
+          <h2 class="section-title">A peaceful place to slow down.</h2>
+          <p class="section-copy">
+            Taicheng Relaxing Spa is dedicated to creating a clean, quiet, and private massage
+            environment where every visit feels restorative. Our space is designed for guests who
+            want to release daily tension, ease work-related discomfort, and enjoy a more relaxed,
+            balanced body.
+          </p>
+
+          <div class="about-features">
+            <div class="feature">
+              <b>Clean Rooms</b>
+              <span>Comfortable, tidy treatment areas prepared for relaxation.</span>
+            </div>
+            <div class="feature">
+              <b>Private Setting</b>
+              <span>A calm environment that lets you fully unwind.</span>
+            </div>
+            <div class="feature">
+              <b>Quiet Atmosphere</b>
+              <span>Soft, peaceful surroundings for stress relief.</span>
+            </div>
+            <div class="feature">
+              <b>Wellness Focus</b>
+              <span>Services designed to help with neck, shoulder, back, leg, and sciatic discomfort.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual reveal parallax" style="--speed: -0.026px;" aria-label="Taicheng Relaxing Spa storefront"></div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="services-header reveal">
+          <div>
+            <div class="section-kicker">Services & Pricing</div>
+            <h2 class="section-title">Massage services for real relief.</h2>
+            <p class="section-copy">
+              Choose a focused foot reflexology session, a full-body table service, or a quick chair massage
+              for targeted relief during a busy day.
+            </p>
+          </div>
+          <div class="services-note">
+            Deep tissue upgrades are available for select services. Prices are based on the posted in-store menu.
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal parallax" style="--speed: 0.01px;">
+            <div class="carousel" aria-label="Foot Reflexology Massage image carousel">
+              <img src="https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg" alt="Foot reflexology massage" />
+              <img src="https://i.pinimg.com/1200x/71/a4/b7/71a4b75a19fbadf33bc6dc340e91340c.jpg" alt="Relaxing foot massage" />
+              <img src="https://i.pinimg.com/1200x/2b/85/42/2b8542fd0d099c9771bb5b332d6f51a9.jpg" alt="Foot and leg massage" />
+            </div>
+            <div class="service-body">
+              <h3>Foot Reflexology Massage</h3>
+              <p>Feet and legs only. Ideal for tired feet, leg fatigue, standing jobs, travel tension, and anyone who wants focused lower-body relief.</p>
+              <div class="price-list">
+                <div class="price-row"><span>30 Minutes</span><strong>$30</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card reveal parallax" style="--speed: 0.018px;">
+            <div class="carousel" aria-label="Reflexology Combo Massage image carousel">
+              <img src="https://i.pinimg.com/736x/76/48/7c/76487c07076e4b41fcce7c4ea35e2005.jpg" alt="Foot reflexology combo massage" />
+              <img src="https://i.pinimg.com/736x/19/1e/83/191e837a24d9e5efd7f015539b78c373.jpg" alt="Foot reflexology and body massage" />
+              <img src="https://i.pinimg.com/736x/d2/08/0e/d2080e371f664c11f134eb291883c1dc.jpg" alt="Relaxing reflexology session" />
+            </div>
+            <div class="service-body">
+              <h3>Reflexology Combo Massage</h3>
+              <p>Head to toe; foot reflexology plus body massage. A balanced option for guests who want full relaxation with focused foot relief.</p>
+              <div class="price-list">
+                <div class="price-row"><span>60 Minutes</span><strong>$50</strong></div>
+                <div class="price-row"><span>90 Minutes</span><strong>$80</strong></div>
+              </div>
+              <span class="addon">Deep tissue plus: +$10</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal parallax" style="--speed: 0.026px;">
+            <div class="carousel" aria-label="Table Massage image carousel">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1L-0O6Juxasb8QicSAXdnWLSQjLrVvGVr8HPij_dvsgW7cWCeMVBGB-12hqGhPUkx5oA&usqp=CAU" alt="Table massage" />
+              <img src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg" alt="Full body table massage" />
+              <img src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg" alt="Back and shoulder massage" />
+            </div>
+            <div class="service-body">
+              <h3>Table Massage</h3>
+              <p>Back, neck, shoulders, arms, and legs; no feet. Great for office tension, shoulder stiffness, lower-back discomfort, and daily stress.</p>
+              <div class="price-list">
+                <div class="price-row"><span>30 Minutes</span><strong>$40</strong></div>
+                <div class="price-row"><span>60 Minutes</span><strong>$70</strong></div>
+                <div class="price-row"><span>90 Minutes</span><strong>$100</strong></div>
+              </div>
+              <span class="addon">Deep tissue massage plus: +$10</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal parallax" style="--speed: 0.012px;">
+            <div class="carousel" aria-label="Thai Massage image carousel">
+              <img src="https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg" alt="Thai body massage" />
+              <img src="https://i.pinimg.com/736x/21/8f/4c/218f4cd988ca278667bd28ff54a577ff.jpg" alt="Therapeutic body work" />
+              <img src="https://i.pinimg.com/736x/86/47/ef/8647ef5b51553a8e57ca32e6b2ec74f0.jpg" alt="Deep body massage technique" />
+            </div>
+            <div class="service-body">
+              <h3>Thai Massage</h3>
+              <p>A deeply relaxing body-work service for guests seeking mobility, tension release, and a refreshed feeling after long workdays.</p>
+              <div class="price-list">
+                <div class="price-row"><span>30 Minutes</span><strong>$50</strong></div>
+                <div class="price-row"><span>60 Minutes</span><strong>$70</strong></div>
+                <div class="price-row"><span>90 Minutes</span><strong>$100</strong></div>
+              </div>
+              <span class="addon">Deep tissue plus: +$10</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal parallax" style="--speed: 0.02px;">
+            <div class="carousel" aria-label="Lomi Lomi Massage image carousel">
+              <img src="https://i.pinimg.com/736x/f6/33/48/f6334826491861572c8e532a6a099cdc.jpg" alt="Lomi Lomi body massage" />
+              <img src="https://i.pinimg.com/736x/97/dc/96/97dc9699bc6c850ecd8776eaee3b7898.jpg" alt="Relaxing body massage" />
+              <img src="https://i.pinimg.com/736x/e6/0b/e7/e60be71086090d2d3f2737b2291242a9.jpg" alt="Comforting full body massage" />
+            </div>
+            <div class="service-body">
+              <h3>Lomi Lomi Massage</h3>
+              <p>A soothing full-body massage option for deep relaxation, stress relief, and a smooth, comforting sense of renewal.</p>
+              <div class="price-list">
+                <div class="price-row"><span>30 Minutes</span><strong>$50</strong></div>
+                <div class="price-row"><span>60 Minutes</span><strong>$70</strong></div>
+                <div class="price-row"><span>90 Minutes</span><strong>$100</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card reveal parallax" style="--speed: 0.028px;">
+            <div class="carousel" aria-label="Chair Massage image carousel">
+              <img src="https://i.pinimg.com/736x/f1/ee/df/f1eedfc8c7b5322308d56bda63212a19.jpg" alt="Chair massage" />
+              <img src="https://i.pinimg.com/736x/f1/ee/df/f1eedfc8c7b5322308d56bda63212a19.jpg" alt="Quick seated chair massage" />
+              <img src="https://i.pinimg.com/736x/f1/ee/df/f1eedfc8c7b5322308d56bda63212a19.jpg" alt="Seated shoulder massage" />
+            </div>
+            <div class="service-body">
+              <h3>Chair Massage</h3>
+              <p>Fast, convenient relief for neck, shoulders, and back. Perfect for a lunch break, quick reset, or targeted upper-body tension.</p>
+              <div class="price-list">
+                <div class="price-row"><span>10 Minutes</span><strong>$15</strong></div>
+                <div class="price-row"><span>20 Minutes</span><strong>$25</strong></div>
+                <div class="price-row"><span>30 Minutes</span><strong>$35</strong></div>
+                <div class="price-row"><span>60 Minutes</span><strong>$65</strong></div>
+              </div>
+              <span class="addon">Hot stone: +$10</span>
+              <span class="addon">Deep tissue plus: +$10</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booking" id="booking">
+      <div class="container">
+        <div class="booking-card reveal">
+          <div>
+            <div class="section-kicker" style="color: #ffd8bf;">Booking</div>
+            <h2 class="section-title">Ready to feel refreshed?</h2>
+            <p class="section-copy">
+              Call us to book your preferred massage time or stop by for walk-in availability.
+              Gift certificate packages, group rates, party events, and fundraising options are available.
+            </p>
+          </div>
+
+          <div class="booking-panel">
+            <h3>Book by Phone</h3>
+            <p>Speak with us directly for appointment availability and service recommendations.</p>
+            <a href="tel:6023399766">
+              <span>Call Now</span>
+              <span>602-339-9766</span>
+            </a>
+            <a href="#contact">
+              <span>Find Us</span>
+              <span>Phoenix, AZ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews" id="reviews">
+      <div class="container reveal">
+        <div class="section-kicker">Testimonials</div>
+        <h2 class="section-title">Guests come here to unwind.</h2>
+        <p class="section-copy">
+          Realistic guest-style reviews that reflect the calm, professional, and relief-focused experience people look for in a massage visit.
+        </p>
+      </div>
+
+      <div class="marquee-wrap" aria-label="Customer reviews">
+        <div class="marquee">
+          <div class="review-card"><div class="stars">★★★★★</div><p>“The foot reflexology was exactly what I needed after a long week. My legs felt lighter right away.”</p><b>— Amanda R.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“Clean, quiet, and very relaxing. The table massage helped my neck and shoulders so much.”</p><b>— Daniel K.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“Great value for the 90-minute service. I left feeling calm, loose, and completely refreshed.”</p><b>— Michelle S.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“The chair massage is perfect when I only have a short break. Fast relief and very convenient.”</p><b>— Chris T.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“The reflexology combo gave me both foot relief and body relaxation. I will definitely return.”</p><b>— Laura M.</b></div>
+
+          <div class="review-card"><div class="stars">★★★★★</div><p>“The foot reflexology was exactly what I needed after a long week. My legs felt lighter right away.”</p><b>— Amanda R.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“Clean, quiet, and very relaxing. The table massage helped my neck and shoulders so much.”</p><b>— Daniel K.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“Great value for the 90-minute service. I left feeling calm, loose, and completely refreshed.”</p><b>— Michelle S.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“The chair massage is perfect when I only have a short break. Fast relief and very convenient.”</p><b>— Chris T.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“The reflexology combo gave me both foot relief and body relaxation. I will definitely return.”</p><b>— Laura M.</b></div>
+        </div>
+
+        <div class="marquee reverse">
+          <div class="review-card"><div class="stars">★★★★★</div><p>“I appreciated the peaceful room and simple pricing. No pressure, just a good relaxing massage.”</p><b>— Kevin P.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“Thai massage helped me feel more flexible and less stiff. A wonderful reset for my back.”</p><b>— Natalie G.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“The Lomi Lomi massage was smooth and calming. I felt relaxed for the rest of the day.”</p><b>— Olivia W.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“Easy parking, friendly service, and a very comfortable environment. Great local massage spot.”</p><b>— Mark L.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“I came in with shoulder tension and left feeling much better. The deep tissue upgrade was worth it.”</p><b>— Sophia C.</b></div>
+
+          <div class="review-card"><div class="stars">★★★★★</div><p>“I appreciated the peaceful room and simple pricing. No pressure, just a good relaxing massage.”</p><b>— Kevin P.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“Thai massage helped me feel more flexible and less stiff. A wonderful reset for my back.”</p><b>— Natalie G.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“The Lomi Lomi massage was smooth and calming. I felt relaxed for the rest of the day.”</p><b>— Olivia W.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“Easy parking, friendly service, and a very comfortable environment. Great local massage spot.”</p><b>— Mark L.</b></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p>“I came in with shoulder tension and left feeling much better. The deep tissue upgrade was worth it.”</p><b>— Sophia C.</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container faq-grid">
+        <div class="reveal parallax" style="--speed: 0.016px;">
+          <div class="section-kicker">FAQs</div>
+          <h2 class="section-title">Before your visit.</h2>
+          <p class="section-copy">
+            A few simple details to help you feel prepared, comfortable, and confident before your massage.
+          </p>
+        </div>
+
+        <div class="accordion reveal">
+          <div class="faq-item active">
+            <button class="faq-question" type="button">
+              <span>How early should I arrive?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Please arrive 5–10 minutes early so you have time to check in, choose your service, and settle in without feeling rushed.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Can I get a massage if I have an injury?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>If you have a recent injury, serious pain, or a medical condition, please check with your healthcare provider first and tell us before your session begins.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>What is your cancellation policy?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Please call as soon as possible if you need to change or cancel your appointment so we can offer the time to another guest.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Is there parking available?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Parking is available near the location. Please allow a few extra minutes during busy times.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-kicker">Contact & Location</div>
+          <h2 class="section-title">Visit Taicheng Relaxing Spa.</h2>
+          <p class="section-copy">
+            Walk-ins are welcome. For the best availability, call ahead and reserve your preferred time.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal parallax" style="--speed: 0.014px;">
+            <h3 style="font-size: 2rem; color: var(--brand-dark); line-height: 1.1;">Taicheng Relaxing Spa</h3>
+
+            <div class="info-list">
+              <div class="info-item">
+                <b>Phone</b>
+                <a href="tel:6023399766">602-339-9766</a>
+              </div>
+
+              <div class="info-item">
+                <b>Address</b>
+                <span>8941 N 12th St., Suite 6,<br />Phoenix, AZ 85020</span>
+              </div>
+
+              <div class="info-item">
+                <b>Hours</b>
+                <span>Please call for current business hours and appointment availability.</span>
+              </div>
+
+              <div class="info-item">
+                <b>Available Options</b>
+                <span>Gift certificate packages, group rates, party events, fundraising, and walk-ins.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-card reveal parallax" style="--speed: -0.018px;">
+            <iframe
+              title="Google Map for Taicheng Relaxing Spa"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=8941%20N%2012th%20St%20Suite%206%20Phoenix%20AZ%2085020&output=embed">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Taicheng Relaxing Spa. Professional massage and reflexology services in Phoenix, AZ.
+    </div>
+  </footer>
+
+  <script>
+    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.querySelector(".menu-toggle");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+    const setScrollValue = () => {
+      document.documentElement.style.setProperty("--scroll", window.scrollY);
+    };
+
+    setScrollValue();
+    window.addEventListener("scroll", setScrollValue, { passive: true });
+
+    document.querySelectorAll(".faq-question").forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".faq-item");
+        const allItems = document.querySelectorAll(".faq-item");
+
+        allItems.forEach((faq) => {
+          if (faq !== item) faq.classList.remove("active");
+        });
+
+        item.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>
