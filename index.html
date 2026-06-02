@@ -6,6 +6,12 @@
   <title>Taicheng Relaxing Spa | Professional Massage in Phoenix, AZ</title>
   <meta name="description" content="Taicheng Relaxing Spa offers professional massage, reflexology, Thai massage, Swedish massage, couples massage, four-hand massage, and chair massage in Phoenix, AZ." />
 
+  <script
+    id="anywhere_book_now_script"
+    type="text/javascript"
+    src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js">
+  </script>
+
   <style>
     :root {
       --bg: #fff8f2;
@@ -47,6 +53,10 @@
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
     }
 
     img {
@@ -133,7 +143,8 @@
       gap: 6px;
     }
 
-    .nav-links a {
+    .nav-links a,
+    .nav-links button {
       padding: 9px 13px;
       border-radius: 999px;
       color: #654943;
@@ -141,13 +152,21 @@
       transition: 0.25s ease;
     }
 
-    .nav-links a:hover {
+    .nav-links button {
+      border: 0;
+      background: transparent;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover,
+    .nav-links button:hover {
       background: rgba(184, 71, 58, 0.09);
       color: var(--brand-dark);
     }
 
     .nav-cta {
-      background: var(--brand);
+      background: var(--brand) !important;
       color: #fff !important;
       box-shadow: 0 10px 26px rgba(184, 71, 58, 0.25);
     }
@@ -285,6 +304,7 @@
       font-weight: 800;
       cursor: pointer;
       transition: 0.25s ease;
+      font-family: inherit;
     }
 
     .btn-primary {
@@ -612,6 +632,14 @@
       font-weight: 800;
     }
 
+    .setmore-booking-button {
+      width: 100%;
+      justify-content: center;
+      margin-top: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
     .reviews {
       background: #fff3ea;
     }
@@ -824,7 +852,8 @@
         display: flex;
       }
 
-      .nav-links a {
+      .nav-links a,
+      .nav-links button {
         padding: 13px 16px;
       }
 
@@ -943,7 +972,7 @@
       <a href="#reviews">Reviews</a>
       <a href="#faq">FAQs</a>
       <a href="#contact">Contact</a>
-      <a href="#booking" class="nav-cta">Book Now</a>
+      <button type="button" class="nav-cta" data-open-setmore>Book Now</button>
     </div>
   </nav>
 
@@ -962,7 +991,7 @@
         and healthful comfort from head to toe.
       </p>
       <div class="hero-actions reveal">
-        <a href="#booking" class="btn btn-primary">Book Now</a>
+        <button type="button" class="btn btn-primary" data-open-setmore>Book Now</button>
         <a href="tel:6023399766" class="btn btn-ghost">Call 602-339-9766</a>
       </div>
     </div>
@@ -1190,8 +1219,16 @@
           </div>
 
           <div class="booking-panel">
-            <h3>Book by Phone</h3>
-            <p>Speak with us directly for appointment availability and service recommendations.</p>
+            <h3>Book Online</h3>
+            <p>Choose your preferred service and appointment time through our online booking page.</p>
+            <button
+              style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;"
+              id="Anywhere_button_iframe"
+              class="anywhere-book-now-button setmore-booking-button"
+              data-booking-url="https://trs3bt2.setmore.com"
+              data-new-tab="false">
+              Book now
+            </button>
             <a href="tel:6023399766">
               <span>Call Now</span>
               <span>602-339-9766</span>
@@ -1363,9 +1400,19 @@
       navLinks.classList.toggle("open");
     });
 
-    navLinks.querySelectorAll("a").forEach((link) => {
+    navLinks.querySelectorAll("a, button").forEach((link) => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("open");
+      });
+    });
+
+    const setmoreMainButton = document.getElementById("Anywhere_button_iframe");
+
+    document.querySelectorAll("[data-open-setmore]").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (setmoreMainButton) {
+          setmoreMainButton.click();
+        }
       });
     });
 
